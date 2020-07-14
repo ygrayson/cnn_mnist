@@ -1,36 +1,133 @@
 """Convolutional Neural Network."""
 
-import numpy as np
-import pandas as pd
+
+import matplotlib
+import matplotlib.pyplot as plt
 
 import torch
 import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import DataLoader
 import torch.nn.functional as F
-import torch.utils.data
-from torch.autograd import Variable
 
 import torchvision
+from torchvision import transforms
 from torchvision.datasets import MNIST
 
 
 class CNN(nn.Module):
     def __init__(self):
+        """init."""
         super(CNN, self).__init__()
-        self.conv1 = nn.Conv2d(1, 32, kernel_size=5)
-        self.conv2 = nn.Conv2d(32, 32, kernel_size=5)
-        self.conv3 = nn.Conv2d(32,64, kernel_size=5)
-        self.fc1 = nn.Linear(3*3*64, 256)
-        self.fc2 = nn.Linear(256, 10)
 
+        # 卷积网络层
+        self.conv1 = nn.Conv2d(in_channels=1, out_channels=5, kernel_size=3, stride=1, padding=1)
+        self.maxpool1 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.conv2 = nn.Conv2d(in_channels=5, out_channels=10, kernel_size=3, stride=1, padding=1)
+        self.maxpool2 = nn.MaxPool2d(kernel_size=2, stride=2)
+
+        # 完全连接网络层
+        self.fc1 = nn.Linear(in_features=7*7*10, out_features=128)
+        self.fc2 = nn.Linear(in_features=128, out_features=10)
+    
+    def forward(self, x):
+        """forward."""
+        # 第一层卷积和取最大值
+        x = F.relu(self.conv1(x))
+        x = self.maxpool1(x)
+
+        # 第二层卷积和取最大值
+        x = F.relu(self.conv2(x))
+        x = self.maxpool2(x)
+
+        # 完全连接层
+        x = x.view(-1, 7*7*10)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+
+        return x
+
+
+
+def visualize_data(train_data, test_data):
+    """visualize data."""
+    # 数据集的基本信息
+    print(train_data)
+    print(test_data)
+    print("Size of training data:", train_data.data.shape)
+
+    # 展示前40张手写数字
+    num_of_images = 40
+    for index in range(1, num_of_images + 1):
+        plt.subplot(4, 10, index)
+        plt.axis('off')
+        plt.imshow(train_data.data[index], cmap='gray_r')
+    plt.show()
+    
 def main():
     # 首先载入数据，这里直接使用PyTorch的MNIST数据集
-    train_data = MNIST(root='./data', train=True, download=True, transform=None)
-    test_data = MNIST(root='./data', train=False, download=True, transform=None)
-    #print(train_data)
-    #print(test_data)
+    transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])
+    train_data = MNIST(root='./data', train=True, download=True, transform=transform)
+    test_data = MNIST(root='./data', train=False, download=True, transform=transform)
+    train_loader = DataLoader(train_data, batch_size=100, shuffle=True)
+    test_loader = DataLoader(test_data)
+
+    # 展示训练集和测试集的基本信息
+    visualize_data(train_data, test_data)
+
+    # 定义神经网络和训练参数
+    model = CNN()
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.Adam(model.parameters(), lr = 3e-4, weight_decay= 0.001)
+    batch_size = 100
+    epoch_num = train_data.data.shape[0] // batch_size
+
+    # 训练神经网络
+    count = 0
+    loss_list = []
+    iteration_list = []
+    accuracy_list = []
+    for epoch in range(epoch_num):
+        # 每个batch一起训练，更新神经网络weights
+        for idx, (img, label) in enumerate(train_loader):
+            optimizer.zero_grad()
+            output = model(img)
+            loss = criterion(output, label)
+            loss.backward()
+            optimizer.step()
+
+        count += 1
+        
+        if count % 50 == 0:
+            # Calculate Accuracy         
+            correct = 0
+            total = 0
+            # Iterate through test dataset
+            for i, data in enumerate(test_loader):
+                test, labels = data
+                
+                # Forward propagation
+                outputs = model(test)
+                
+                # Get predictions from the maximum value
+                predicted = torch.max(outputs.data, 1)[1]
+                
+                # Total number of labels
+                total += len(labels)
+                correct += (predicted == labels).sum()
+            
+            accuracy = 100 * correct / float(total)
+            
+            # store loss value and iteration
+            loss_list.append(loss.data)
+            iteration_list.append(count)
+            accuracy_list.append(accuracy)
+        if count % 600 == 0:
+            # Print Loss
+            print('Iteration: {}  Loss: {}  Accuracy: {} %'.format(count, loss.data, accuracy))
+        
 
     
-
 
 if __name__ == '__main__':
     main()
