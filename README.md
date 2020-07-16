@@ -242,7 +242,7 @@ for epoch in range(1, epoch_num+1):
 <img align="left" src="images/training_2epoch.png" alt="train_2epoch" width="70%" height="70%">
 <br/><br/>
 -->
-![testing_2epoch](https://github.com/ygrayson/cnn_mnist/blob/master/images/testing_2epoch.png | width=70%)
+![testing_2epoch](https://github.com/ygrayson/cnn_mnist/blob/master/images/training_2epoch.png)
 
 
 ### 测试模型
@@ -267,11 +267,12 @@ print('Testing Results:\n  Loss: {}  \nAccuracy: {} %'.format(loss.data, accurac
 ```
 
 一起来看看测试结果：
+![testing_2epoch](https://github.com/ygrayson/cnn_mnist/blob/master/images/testing_2epoch.png)
+<!-->
 <br/>
-<p>
 <img align="left" src="images/testing_2epoch.png" alt="test_2epoch" width="70%" height="70%">
-</p>
 <br/>
+-->
 竟然高达77%……我才只用了200个训练集。
 
 <!-- Contact Me -->
