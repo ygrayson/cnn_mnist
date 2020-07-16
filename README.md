@@ -63,8 +63,8 @@
 
 ### 使用工具
 主要使用的语言和平台如下：
-* 语言：[Python](https://www.python.org/)
-* 平台：[Pytorch](https://pytorch.org/)
+* 语言 - [Python](https://www.python.org/)
+* 平台 - [Pytorch](https://pytorch.org/)
 
 
 <!-- GETTING STARTED -->
@@ -99,14 +99,28 @@ pip install matplotlib
 <!-- Start Recognizing Digits -->
 ## 开始识别数字吧！
 
-完成了安装，我们就可以开始训练神经网络识别数字了，首先载入数据。
+完成了安装，我们就可以开始训练神经网络识别数字了，第一步载入数据。
 
 
-<!-- Loading Data -->
 ### 载入数据
 
-首先载入数据，全部MNIST手写数字数据集来自于[Yann LeCun](http://yann.lecun.com/exdb/mnist/)
+首先载入数据，全部MNIST手写数字数据集来自于[Yann LeCun](http://yann.lecun.com/exdb/mnist/)，这里我们使用torchvision.datasets里已经有的MNIST数据集，与从网站下载效果相同：
+```python
+from torchvision.datasets import MNIST
+train_data = MNIST(root='./data', train=True, download=True, transform=transform)
+test_data = MNIST(root='./data', train=False, download=True, transform=transform)
+```
 
+### 看看数据啥样儿
+
+
+### 建立模型
+
+
+### 训练模型
+
+
+### 测试模型
 
 
 <!-- Contact Me -->
