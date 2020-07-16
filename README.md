@@ -241,7 +241,7 @@ Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayso
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/ygrayson/cnn_mnist.svg?style=flat-square
 [contributors-url]: https://github.com/ygrayson/cnn_mnist/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
 [forks-url]: https://github.com/ygrayson/cnn_mnist/network/members
