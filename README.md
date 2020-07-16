@@ -213,15 +213,56 @@ print(total_params)
 64648
 ```
 
-6万多的参数等待训练......
+6万多的参数等待训练......首先定义Loss Function和optimizer，这里使用CrossEntropy和Adam:
+```python
+# 定义神经网络和训练参数
+model = CNN()
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=3e-4, weight_decay=0.001)
+batch_size = 100
+epoch_num = int(train_data.data.shape[0]) // batch_size
+```
+
+这里的batch_size是100，也就意味着我们一共有60000个数据在训练集里，要训练600个回合才能全部训练完。训练过程：
+```python
+for epoch in range(1, epoch_num+1):
+    # 每个batch一起训练，更新神经网络weights
+    for idx, (img, label) in enumerate(train_loader):
+        optimizer.zero_grad()
+        output = model(img)
+        loss = criterion(output, label)
+        loss.backward()
+        optimizer.step()
+    print("Training Epoch {} Completed".format(epoch))
+```
+
+训练的时间比较长，建议使用Amazon Web Service或者其他计算能力比较强的机器。
 
 ### 测试模型
 
+完成了训练后我们的主要任务就已经完成了，接下来就要看看我们的CNN训练的究竟好不好，测试集的10000个手写数字对于我们的CNN模型而言是全新的数据，因此我们用测试集看看效果：
+```python
+total = 0
+correct = 0
+for i, (test_img, test_label) in enumerate(test_loader):
+    # 正向通过神经网络得到预测结果
+    outputs = model(test_img)
+    predicted = torch.max(outputs.data, 1)[1]
+    print("Correct label is", test_label)
+    print("Prediction is", predicted)
+    
+    # 总数和正确数
+    total += len(test_label)
+    correct += (predicted == test_label).sum()
+
+accuracy = correct / total
+print('Testing Results:\n  Loss: {}  \nAccuracy: {} %'.format(loss.data, accuracy*100))
+```
 
 <!-- Contact Me -->
 ## 联系我
 
-Qianbo Yin - [@LinkedIn][linkedin-url]
+Qianbo Yin - [@LinkedIn][linkedin-url] (Currently looking for PhD position!)
 
 Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayson/cnn_mnist)
 

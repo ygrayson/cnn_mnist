@@ -84,8 +84,9 @@ def main():
     batch_size = 100
     epoch_num = int(train_data.data.shape[0]) // batch_size
 
-    total_params = sum(p.numel() for p in model.parameters())
-    print(total_params)
+    #total_params = sum(p.numel() for p in model.parameters())
+    #print(total_params)
+    
     # 训练神经网络
     print("===============Training CNN==================")
     print("Total Training Epoch: {}".format(epoch_num))
