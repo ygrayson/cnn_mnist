@@ -75,7 +75,7 @@ def main():
 
     # 看看数据是啥样儿
     print("===============Visualizing Data==============")
-    visualize_data(train_data, test_data)
+    #visualize_data(train_data, test_data)
 
     # 定义神经网络和训练参数
     model = CNN()
@@ -84,6 +84,8 @@ def main():
     batch_size = 100
     epoch_num = int(train_data.data.shape[0]) // batch_size
 
+    total_params = sum(p.numel() for p in model.parameters())
+    print(total_params)
     # 训练神经网络
     print("===============Training CNN==================")
     print("Total Training Epoch: {}".format(epoch_num))
@@ -108,6 +110,8 @@ def main():
         # 正向通过神经网络得到预测结果
         outputs = model(test_img)
         predicted = torch.max(outputs.data, 1)[1]
+        print("Correct label is", test_label)
+        print("Prediction is", predicted)
         
         # 总数和正确数
         total += len(test_label)
