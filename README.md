@@ -242,7 +242,7 @@ for epoch in range(1, epoch_num+1):
 <img align="left" src="images/training_2epoch.png" alt="train_2epoch" width="70%" height="70%">
 <br/><br/>
 -->
-![alt text](https://github.com/ygrayson/cnn_mnist/blob/master/images/testing_2epoch.png)
+![testing_2epoch](https://github.com/ygrayson/cnn_mnist/blob/master/images/testing_2epoch.png | width=70%)
 
 
 ### 测试模型
