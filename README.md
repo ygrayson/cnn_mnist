@@ -156,13 +156,27 @@ for index in range(1, num_of_images + 1):
     plt.imshow(train_data.data[index], cmap='gray_r')
 plt.show()
 ```
-这段code用matplotlib画出前四十张训练集里的手写数字，在同一张图里呈现，图如下：
+这段code用matplotlib画出前40张训练集里的手写数字，在同一张图里呈现，图如下：
 <br/>
 <img align="center" src="images/digits.png" alt="40Digit" width="400" height="400">
 <br/>
 我们的任务就是通过只看到手写数字的图片，建立一个CNN模型成功的识别出它是0-9的哪一个数字。
 
+
 ### 建立模型
+
+我们选择的模型不算复杂，首先两层卷积提取图片的features，接下来两层完全连接进行识别：
+```python
+# 卷积网络层
+self.conv1 = nn.Conv2d(in_channels=1, out_channels=5, kernel_size=3, stride=1, padding=1)
+self.maxpool1 = nn.MaxPool2d(kernel_size=2, stride=2)
+self.conv2 = nn.Conv2d(in_channels=5, out_channels=10, kernel_size=3, stride=1, padding=1)
+self.maxpool2 = nn.MaxPool2d(kernel_size=2, stride=2)
+
+# 完全连接网络层
+self.fc1 = nn.Linear(in_features=7*7*10, out_features=128)
+self.fc2 = nn.Linear(in_features=128, out_features=10)
+```
 
 
 ### 训练模型
@@ -191,8 +205,8 @@ Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayso
 * [Slick Carousel](https://kenwheeler.github.io/slick)
 * [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
 * [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
 * README.md created with [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+* [感谢清华大学杨哲宇师兄给我留的暑期作业]()
 
 
 
