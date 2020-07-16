@@ -20,7 +20,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ygrayson/cnn_mnist">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/sample_digit.png" alt="Digit" width="80" height="80">
   </a>
 
   <h3 align="center">卷积神经网络CNN识别手写数字MNIST数据集</h3>
@@ -31,8 +31,9 @@
 
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+## 目录
 
+* [guoying](#guoying)
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
@@ -46,7 +47,7 @@
 * [Acknowledgements](#acknowledgements)
 
 
-
+## guoying
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
