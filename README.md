@@ -240,7 +240,7 @@ for epoch in range(1, epoch_num+1):
 由于我的机器实在太弱了，我训练了两轮就掐掉了，也就意味着只用了200个训练集的数字，估计表现会比较差（此处留下悬疑）
 <br/>
 <img align="left" src="images/training_2epoch.png" alt="train_2epoch" width="60%" height="60%">
-<br/>  
+<br/><br/>
 
 
 
