@@ -35,10 +35,10 @@
 
 * [简介](#简介)
   * [使用工具](#使用工具)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
+* [安装](#安装)
+  * [语言](#语言)
+  * [平台](#平台)
+* [开始识别数字！](#开始识别数字吧！)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -95,16 +95,13 @@ pip install matplotlib
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## 开始识别数字吧！
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
+完成了安装，我们就可以开始训练神经网络识别数字了，首先载入数据。
 
 
 <!-- ROADMAP -->
-## Roadmap
+## 载入数据
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 
@@ -133,9 +130,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Qianbo Yin - [@LinkedIn](https://www.linkedin.com/in/qianbo-yin-a91861114/)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayson/cnn_mnist)
 
 
 
