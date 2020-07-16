@@ -50,9 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## 简介
 
-深度学习发展迅速，MNIST手写数字数据集作为机器学习早期的数据集已经被公认为是机器学习界的果蝇实验（Hinton)，卷积神经网络是识别
-图像非常有效的一种架构，于是用CNN识别手写数字也就成为了机器学习界的经典实验。在这个repo中我会呈现最基本的CNN识别MNIST数据集
-过程。
+深度学习发展迅速，MNIST手写数字数据集作为机器学习早期的数据集已经被公认为是机器学习界的果蝇实验（Hinton某年)，卷积神经网络是识别图像非常有效的一种架构，于是用<b>CNN识别手写数字</b>也就成为了机器学习界的经典实验。在这个repo中我会呈现最基本的CNN识别MNIST数据集过程。
 主要步骤如下：
 * 载入数据
 * 看看数据啥样儿（也即Visualization）
@@ -61,12 +59,10 @@
 * 测试模型（看看训练的好不好）
 
 
-### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
+### 使用的语言和平台
+主要使用的语言和平台如下：
+* 语言：[Python](https://www.python.org/)
+* 平台：[Pytorch](https://pytorch.org/)
 
 
 <!-- GETTING STARTED -->
