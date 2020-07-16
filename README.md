@@ -238,10 +238,11 @@ for epoch in range(1, epoch_num+1):
 
 训练的时间比较长，建议使用Amazon Web Service或者其他计算能力比较强的机器。  
 由于我的机器实在太弱了，我训练了两轮就掐掉了，也就意味着只用了200个训练集的数字，估计表现会比较差（此处留下悬疑）
-<br/>
+<!--<br/>
 <img align="left" src="images/training_2epoch.png" alt="train_2epoch" width="70%" height="70%">
 <br/><br/>
-
+-->
+![alt text](https://github.com/ygrayson/cnn_mnist/blob/master/images/testing_2epoch.png)
 
 
 ### 测试模型
