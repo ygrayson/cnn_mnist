@@ -34,7 +34,7 @@
 ## 目录
 
 * [简介](#简介)
-  * [Built With](#built-with)
+  * [使用工具](#使用工具)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -59,42 +59,39 @@
 * 测试模型（看看训练的好不好）
 
 
-### 使用的语言和平台
+### 使用工具
 主要使用的语言和平台如下：
 * 语言：[Python](https://www.python.org/)
 * 平台：[Pytorch](https://pytorch.org/)
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## 安装
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+安装包括Python语言和几个必备的Pytorch包，使用Linux系统的安装方式如下:
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+### 语言
+检查一下Python语言：
+* Python
 ```sh
-npm install npm@latest -g
+$ python3 --version
+Python 3.7.7
 ```
 
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+### Pytorch包
+1. 安装Pytorch
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+pip install torch
 ```
-3. Install NPM packages
+2. 安装Torchvision
 ```sh
-npm install
-```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
+pip install torchvision
 ```
 
+3. 安装Matplotlib
+```sh
+pip install matplotlib
+```
 
 
 <!-- USAGE EXAMPLES -->
