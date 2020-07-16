@@ -104,7 +104,7 @@ pip install matplotlib
 
 ### 载入数据
 
-首先载入数据，全部MNIST手写数字数据集来自于[Yann LeCun](http://yann.lecun.com/exdb/mnist/)，这里我们使用torchvision.datasets里已经有的MNIST数据集，与从网站下载效果相同：
+首先载入数据，全部MNIST手写数字数据集来自于[Yann LeCun网站](http://yann.lecun.com/exdb/mnist/)，这里我们使用torchvision.datasets里已经有的MNIST数据集，与从网站下载效果相同：
 ```python
 from torchvision.datasets import MNIST
 train_data = MNIST(root='./data', train=True, download=True, transform=transform)
