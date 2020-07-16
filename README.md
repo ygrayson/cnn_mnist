@@ -267,7 +267,9 @@ print('Testing Results:\n  Loss: {}  \nAccuracy: {} %'.format(loss.data, accurac
 
 一起来看看测试结果：
 <br/>
+<p>
 <img align="left" src="images/testing_2epoch.png" alt="test_2epoch" width="70%" height="70%">
+</p>
 <br/>
 竟然高达77%……我才只用了200个训练集。
 
