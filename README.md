@@ -115,8 +115,7 @@ test_data = MNIST(root='./data', train=False, download=True, transform=transform
 
 要想建立一个好的模型，首先我们要熟悉所处理的数据集是怎样的，MNIST的数据集中每一张手写数字图片均是灰度的28*28的图片，同上配有一个正确的0-9的label。先来一起看看训练集和测试集：
 ```python
-    print(train_data)
-    print(test_data)
+print(train_data)
 ```
 ```
 Dataset MNIST
@@ -128,6 +127,11 @@ Transform: Compose(
                ToTensor()
                Normalize(mean=(0.5,), std=(0.5,))
            )
+```
+```python
+print(test_data)
+```
+```
 Dataset MNIST
     Number of datapoints: 10000
     Root location: ./data
