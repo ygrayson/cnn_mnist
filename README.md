@@ -221,7 +221,7 @@ print(total_params)
 <!-- Contact Me -->
 ## 联系我
 
-Qianbo Yin - [@LinkedIn](https://www.linkedin.com/in/qianbo-yin-a91861114/)
+Qianbo Yin - [@LinkedIn][linkedin-url]
 
 Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayson/cnn_mnist)
 
@@ -232,7 +232,7 @@ Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayso
 * [MNIST手写数字数据集](http://yann.lecun.com/exdb/mnist/)
 * [Start Your CNN Journey with PyTorch in Python](https://towardsdatascience.com/start-your-cnn-journey-with-pytorch-in-python-6f8364a79801)
 * [Pytorch: Real Step by Step implementation of CNN on MNIST](https://medium.com/swlh/pytorch-real-step-by-step-implementation-of-cnn-on-mnist-304b7140605a)
-* README.md created with [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [感谢清华大学杨哲宇师兄给我留的暑期作业]()
 
 
@@ -252,5 +252,5 @@ Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayso
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/qianbo-yin-a91861114/
 [product-screenshot]: images/screenshot.png
