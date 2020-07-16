@@ -33,7 +33,7 @@
 <!-- TABLE OF CONTENTS -->
 ## 目录
 
-* [guoying](#guoing)
+* [简介](#简介)
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
@@ -47,10 +47,9 @@
 * [Acknowledgements](#acknowledgements)
 
 
-## guoying
-## guoing
+
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## 简介
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
