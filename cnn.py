@@ -86,7 +86,7 @@ def main():
 
     #total_params = sum(p.numel() for p in model.parameters())
     #print(total_params)
-    
+
     # 训练神经网络
     print("===============Training CNN==================")
     print("Total Training Epoch: {}".format(epoch_num))
@@ -111,14 +111,15 @@ def main():
         # 正向通过神经网络得到预测结果
         outputs = model(test_img)
         predicted = torch.max(outputs.data, 1)[1]
-        print("Correct label is", test_label)
-        print("Prediction is", predicted)
         
         # 总数和正确数
         total += len(test_label)
-        correct += (predicted == test_label).sum()
+        if int(predicted) == int(test_label):
+            correct += 1
     
     accuracy = correct / total
+    print("total is", total)
+    print("correct is", correct)
     print('Testing Results:\n  Loss: {}  \nAccuracy: {} %'.format(loss.data, accuracy*100))
 
 

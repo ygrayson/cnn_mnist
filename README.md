@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## 简介
 
-深度学习发展迅速，MNIST手写数字数据集作为机器学习早期的数据集已经被公认为是机器学习界的果蝇实验（Hinton某年)，卷积神经网络是识别图像非常有效的一种架构，于是用<b>CNN识别手写数字</b>也就成为了机器学习界的经典实验。在这个repo中我会呈现最基本的CNN识别MNIST数据集过程。
+深度学习发展迅速，MNIST手写数字数据集作为机器学习早期的数据集已经被公认为是机器学习界的果蝇实验（Hinton某年)，卷积神经网络是识别图像非常有效的一种架构，于是用<b><u>CNN识别手写数字</b></u>也就成为了机器学习界的经典实验。在这个repo中我会呈现最基本的CNN识别MNIST数据集过程。
 主要步骤如下：
 * [载入数据](#载入数据)
 * [看看数据啥样儿（也即Visualization）](#看看数据啥样儿)
@@ -236,7 +236,11 @@ for epoch in range(1, epoch_num+1):
     print("Training Epoch {} Completed".format(epoch))
 ```
 
-训练的时间比较长，建议使用Amazon Web Service或者其他计算能力比较强的机器。
+训练的时间比较长，建议使用Amazon Web Service或者其他计算能力比较强的机器。  
+由于我的机器实在太弱了，我训练了两轮就掐掉了，也就意味着只用了200个训练集的数字，估计表现会比较差（此处留下悬疑）
+<br/>
+<img align="left" src="images/training_2epoch.png" alt="train_2epoch" width="200" height="200">
+<br/>
 
 ### 测试模型
 
@@ -259,6 +263,12 @@ accuracy = correct / total
 print('Testing Results:\n  Loss: {}  \nAccuracy: {} %'.format(loss.data, accuracy*100))
 ```
 
+一起来看看测试结果：
+<br/>
+<img align="left" src="images/testing_2epoch.png" alt="test_2epoch" width="200" height="200">
+<br/>
+竟然高达77%……我才只用了200个训练集。
+
 <!-- Contact Me -->
 ## 联系我
 
@@ -274,7 +284,7 @@ Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayso
 * [Start Your CNN Journey with PyTorch in Python](https://towardsdatascience.com/start-your-cnn-journey-with-pytorch-in-python-6f8364a79801)
 * [Pytorch: Real Step by Step implementation of CNN on MNIST](https://medium.com/swlh/pytorch-real-step-by-step-implementation-of-cnn-on-mnist-304b7140605a)
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-* [感谢清华大学杨哲宇师兄给我留的暑期作业]()
+* [感谢清华大学杨哲宇师兄给我留的暑期作业](https://www.cbicr.tsinghua.edu.cn/)
 
 
 
