@@ -66,28 +66,28 @@ def visualize_data(train_data, test_data):
     
 def main():
     # 首先载入数据，这里直接使用PyTorch的MNIST数据集
+    print("===============Loading MNIST Dataset================")
     transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])
     train_data = MNIST(root='./data', train=True, download=True, transform=transform)
     test_data = MNIST(root='./data', train=False, download=True, transform=transform)
     train_loader = DataLoader(train_data, batch_size=100, shuffle=True)
     test_loader = DataLoader(test_data)
 
-    # 展示训练集和测试集的基本信息
-    visualize_data(train_data, test_data)
+    # 看看数据是啥样儿
+    print("===============Visualizing Data==============")
+    #visualize_data(train_data, test_data)
 
     # 定义神经网络和训练参数
     model = CNN()
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr = 3e-4, weight_decay= 0.001)
+    optimizer = optim.Adam(model.parameters(), lr=3e-4, weight_decay=0.001)
     batch_size = 100
-    epoch_num = train_data.data.shape[0] // batch_size
+    epoch_num = int(train_data.data.shape[0]) // batch_size
 
     # 训练神经网络
-    count = 0
-    loss_list = []
-    iteration_list = []
-    accuracy_list = []
-    for epoch in range(epoch_num):
+    print("===============Training CNN==================")
+    print("Total Training Epoch: {}".format(epoch_num))
+    for epoch in range(1, epoch_num+1):
         # 每个batch一起训练，更新神经网络weights
         for idx, (img, label) in enumerate(train_loader):
             optimizer.zero_grad()
@@ -95,39 +95,27 @@ def main():
             loss = criterion(output, label)
             loss.backward()
             optimizer.step()
-
-        count += 1
-        
-        if count % 50 == 0:
-            # Calculate Accuracy         
-            correct = 0
-            total = 0
-            # Iterate through test dataset
-            for i, data in enumerate(test_loader):
-                test, labels = data
-                
-                # Forward propagation
-                outputs = model(test)
-                
-                # Get predictions from the maximum value
-                predicted = torch.max(outputs.data, 1)[1]
-                
-                # Total number of labels
-                total += len(labels)
-                correct += (predicted == labels).sum()
-            
-            accuracy = 100 * correct / float(total)
-            
-            # store loss value and iteration
-            loss_list.append(loss.data)
-            iteration_list.append(count)
-            accuracy_list.append(accuracy)
-        if count % 600 == 0:
-            # Print Loss
-            print('Iteration: {}  Loss: {}  Accuracy: {} %'.format(count, loss.data, accuracy))
+        print("Training Epoch {} Completed".format(epoch))
+        if epoch == 10:
+            break
         
 
+    # 在测试集上测试
+    print("================Testing the CNN==================")
+    total = 0
+    correct = 0
+    for i, (test_img, test_label) in enumerate(test_loader):
+        # 正向通过神经网络得到预测结果
+        outputs = model(test_img)
+        predicted = torch.max(outputs.data, 1)[1]
+        
+        # 总数和正确数
+        total += len(test_label)
+        correct += (predicted == test_label).sum()
     
+    accuracy = correct / total
+    print('Testing Results:\n  Loss: {}  \nAccuracy: {} %'.format(loss.data, accuracy*100))
+
 
 if __name__ == '__main__':
     main()
