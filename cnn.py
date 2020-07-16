@@ -75,7 +75,7 @@ def main():
 
     # 看看数据是啥样儿
     print("===============Visualizing Data==============")
-    #visualize_data(train_data, test_data)
+    visualize_data(train_data, test_data)
 
     # 定义神经网络和训练参数
     model = CNN()
@@ -96,7 +96,7 @@ def main():
             loss.backward()
             optimizer.step()
         print("Training Epoch {} Completed".format(epoch))
-        if epoch == 10:
+        if epoch == 2:
             break
         
 

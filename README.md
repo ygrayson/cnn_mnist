@@ -54,11 +54,11 @@
 
 深度学习发展迅速，MNIST手写数字数据集作为机器学习早期的数据集已经被公认为是机器学习界的果蝇实验（Hinton某年)，卷积神经网络是识别图像非常有效的一种架构，于是用<b>CNN识别手写数字</b>也就成为了机器学习界的经典实验。在这个repo中我会呈现最基本的CNN识别MNIST数据集过程。
 主要步骤如下：
-* 载入数据
-* 看看数据啥样儿（也即Visualization）
-* 建立模型
-* 训练模型
-* 测试模型（看看训练的好不好）
+* [载入数据](#载入数据)
+* [看看数据啥样儿（也即Visualization）](#看看数据啥样儿)
+* [建立模型](#建立模型)
+* [训练模型](#测试模型)
+* [测试模型（看看训练的好不好）](#测试模型)
 
 
 ### 使用工具
@@ -113,6 +113,48 @@ test_data = MNIST(root='./data', train=False, download=True, transform=transform
 
 ### 看看数据啥样儿
 
+要想建立一个好的模型，首先我们要熟悉所处理的数据集是怎样的，MNIST的数据集中每一张手写数字图片均是灰度的28*28的图片，同上配有一个正确的0-9的label。先来一起看看训练集和测试集：
+```python
+    print(train_data)
+    print(test_data)
+```
+```
+Dataset MNIST
+    Number of datapoints: 60000
+    Root location: ./data
+    Split: Train
+    StandardTransform
+Transform: Compose(
+               ToTensor()
+               Normalize(mean=(0.5,), std=(0.5,))
+           )
+Dataset MNIST
+    Number of datapoints: 10000
+    Root location: ./data
+    Split: Test
+    StandardTransform
+Transform: Compose(
+               ToTensor()
+               Normalize(mean=(0.5,), std=(0.5,))
+           )
+```
+
+训练集中有60000个手写数字及其label，测试集有10000个，接下来我们看看手写数字长啥样儿：
+
+```python
+# 展示前40张手写数字
+import matplotlib.pyplot as plt
+
+num_of_images = 40
+for index in range(1, num_of_images + 1):
+    plt.subplot(4, 10, index)
+    plt.axis('off')
+    plt.imshow(train_data.data[index], cmap='gray_r')
+plt.show()
+```
+这段code用matplotlib画出前四十张训练集里的手写数字，在同一张图里呈现，图如下：
+<img src="images/digits.png" alt="40Digit" width="200" height="200">
+我们的任务就是通过只看到手写数字的图片，建立一个CNN模型成功的识别出它是0-9的哪一个数字。
 
 ### 建立模型
 
