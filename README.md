@@ -34,7 +34,6 @@
 ## 目录
 
 * [简介](#简介)
-* [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
@@ -51,18 +50,16 @@
 <!-- ABOUT THE PROJECT -->
 ## 简介
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+深度学习发展迅速，MNIST手写数字数据集作为机器学习早期的数据集已经被公认为是机器学习界的果蝇实验（Hinton)，卷积神经网络是识别
+图像非常有效的一种架构，于是用CNN识别手写数字也就成为了机器学习界的经典实验。在这个repo中我会呈现最基本的CNN识别MNIST数据集
+过程。
+主要步骤如下：
+* 载入数据
+* 看看数据啥样儿（也即Visualization）
+* 建立模型
+* 训练模型
+* 测试模型（看看训练的好不好）
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
 ### Built With
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
@@ -161,7 +158,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 * [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
 * [Sticky Kit](http://leafo.net/sticky-kit)
 * [JVectorMap](http://jvectormap.com)
-* README.md created with[Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+* README.md created with [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
 
 
