@@ -157,7 +157,9 @@ for index in range(1, num_of_images + 1):
 plt.show()
 ```
 这段code用matplotlib画出前四十张训练集里的手写数字，在同一张图里呈现，图如下：
-<img src="images/digits.png" alt="40Digit" width="200" height="200">
+<br/>
+<img align="center" src="images/digits.png" alt="40Digit" width="400" height="400">
+<br/>
 我们的任务就是通过只看到手写数字的图片，建立一个CNN模型成功的识别出它是0-9的哪一个数字。
 
 ### 建立模型
