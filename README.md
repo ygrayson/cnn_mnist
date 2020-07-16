@@ -39,11 +39,13 @@
   * [语言](#语言)
   * [平台](#平台)
 * [开始识别数字！](#开始识别数字吧！)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [载入数据](#载入数据)
+* [看看数据啥样儿](#看看数据啥样儿)
+* [建立模型](#建立模型)
+* [训练模型](#训练模型)
+* [测试模型](#测试模型)
+* [联系我](#联系我)
+* [致谢](#致谢)
 
 
 
@@ -94,41 +96,21 @@ pip install matplotlib
 ```
 
 
-<!-- USAGE EXAMPLES -->
+<!-- Start Recognizing Digits -->
 ## 开始识别数字吧！
 
 完成了安装，我们就可以开始训练神经网络识别数字了，首先载入数据。
 
 
-<!-- ROADMAP -->
+<!-- Loading Data -->
 ## 载入数据
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-<!-- CONTACT -->
-## Contact
+<!-- Contact Me -->
+## 联系我
 
 Qianbo Yin - [@LinkedIn](https://www.linkedin.com/in/qianbo-yin-a91861114/)
 
@@ -137,7 +119,7 @@ Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayso
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+## 致谢
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
 * [Choose an Open Source License](https://choosealicense.com)
