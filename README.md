@@ -39,11 +39,11 @@
   * [语言](#语言)
   * [平台](#平台)
 * [开始识别数字！](#开始识别数字吧！)
-* [载入数据](#载入数据)
-* [看看数据啥样儿](#看看数据啥样儿)
-* [建立模型](#建立模型)
-* [训练模型](#训练模型)
-* [测试模型](#测试模型)
+  * [载入数据](#载入数据)
+  * [看看数据啥样儿](#看看数据啥样儿)
+  * [建立模型](#建立模型)
+  * [训练模型](#训练模型)
+  * [测试模型](#测试模型)
 * [联系我](#联系我)
 * [致谢](#致谢)
 
@@ -103,9 +103,9 @@ pip install matplotlib
 
 
 <!-- Loading Data -->
-## 载入数据
+### 载入数据
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+首先载入数据，全部MNIST手写数字数据集来自于[Yann LeCun](http://yann.lecun.com/exdb/mnist/)
 
 
 
@@ -120,7 +120,7 @@ Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayso
 
 <!-- ACKNOWLEDGEMENTS -->
 ## 致谢
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [MNIST手写数字数据集](http://yann.lecun.com/exdb/mnist/)
 * [Img Shields](https://shields.io)
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Pages](https://pages.github.com)
