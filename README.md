@@ -230,14 +230,8 @@ Project Link: [https://github.com/ygrayson/cnn_mnist](https://github.com/ygrayso
 <!-- ACKNOWLEDGEMENTS -->
 ## 致谢
 * [MNIST手写数字数据集](http://yann.lecun.com/exdb/mnist/)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
+* [Start Your CNN Journey with PyTorch in Python](https://towardsdatascience.com/start-your-cnn-journey-with-pytorch-in-python-6f8364a79801)
+* [Pytorch: Real Step by Step implementation of CNN on MNIST](https://medium.com/swlh/pytorch-real-step-by-step-implementation-of-cnn-on-mnist-304b7140605a)
 * README.md created with [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [感谢清华大学杨哲宇师兄给我留的暑期作业]()
 
